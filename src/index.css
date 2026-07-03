@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #07100d;
+  color: #f4f2ec;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #1f7a5c;
+  color: #faf9f6;
+}
+
+/* Slim, quant-y scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1613;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f7a5c66;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1f7a5caa;
+}
+
+.tabular-mono {
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hide native cursor only when custom cursor is active (desktop, fine pointer) */
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-active {
+    cursor: none;
+  }
+}
