@@ -30,8 +30,8 @@ export const hero = {
   ],
   subtitle:
     'BSc Computer Science (First Class, University of Essex) — incoming MSc Financial Technology, Imperial College Business School.',
-  // Placeholder: replace with a real headshot at /public/profile.jpg
-  photoPlaceholder: '/public/MPProfPic.jpeg',
+  // Placeholder: replace with a real headshot
+  photoPlaceholder: '/MPProfPic.jpeg',
 };
 
 export const about = {
