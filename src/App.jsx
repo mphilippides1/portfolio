@@ -12,7 +12,7 @@ import Education from './components/Education';
 import Footer from './components/Footer';
 import CustomCursor from './components/ui/CustomCursor';
 
-// Recharts pulls in a sizeable chunk — only needed once the reader scrolls
+// Recharts pulls in a sizeable chunk, only needed once the reader scrolls
 // this far, so it's split out of the main bundle.
 const FlagshipProject = lazy(() => import('./components/FlagshipProject'));
 

@@ -29,7 +29,7 @@ export const hero = {
     'Turning market uncertainty into calibrated, testable decisions.',
   ],
   subtitle:
-    'BSc Computer Science (First Class, University of Essex) — incoming MSc Financial Technology, Imperial College Business School.',
+    'BSc Computer Science (First Class, University of Essex), incoming MSc Financial Technology, Imperial College Business School.',
   // Placeholder: replace with a real headshot
   photoPlaceholder: '/MPProfPic.jpeg',
 };
@@ -37,14 +37,14 @@ export const hero = {
 export const about = {
   paragraphs: [
     'Final-year BSc Computer Science student at the University of Essex, graduating First Class with an overall degree mark of 82%, and moving on to an MSc in Financial Technology at Imperial College Business School (2026–2027).',
-    'Strong quantitative and ML foundation — advanced in Python and Java, with hands-on experience building explainable machine learning systems for financial forecasting rather than black-box predictors.',
+    'Strong quantitative and ML foundation, advanced in Python and Java, with hands-on experience building explainable machine learning systems for financial forecasting rather than black-box predictors.',
     'Has worked across fintech freelance development, Big 4 strategy consulting (Deloitte), and early-stage fintech entrepreneurship (co-founded an insurance comparison platform in Cyprus).',
-    'Balances technical depth with leadership experience — President of the Essex Cypriot Society — and a disciplined, data-driven approach carried over from competitive endurance sport.',
+    'Balances technical depth with leadership experience, President of the Essex Cypriot Society, and a disciplined, data-driven approach carried over from competitive endurance sport.',
   ],
 };
 
 // ---------------------------------------------------------------------------
-// Academic record — interactive dashboard section
+// Academic record: interactive dashboard section
 // ---------------------------------------------------------------------------
 
 export const academics = {
@@ -67,7 +67,7 @@ export const academics = {
 };
 
 // ---------------------------------------------------------------------------
-// Flagship project — Regime-Aware Mixture-of-Experts LSTM
+// Flagship project: Regime-Aware Mixture-of-Experts LSTM
 // ---------------------------------------------------------------------------
 
 export const flagship = {
@@ -76,16 +76,16 @@ export const flagship = {
   // Placeholder: replace with the real repo URL when public
   githubUrl: 'https://github.com/mphilippides1/FINTaiM', // TODO: add GitHub repo link
   framing:
-    'A deliberate reframing of financial forecasting as an uncertainty-aware decision-support problem — not an accuracy-maximisation exercise. The model is judged on whether it knows what it doesn’t know, and on whether that honesty can still be turned into better risk-adjusted decisions.',
+    'A deliberate reframing of financial forecasting as an uncertainty-aware decision-support problem, not an accuracy-maximisation exercise. The model is judged on whether it knows what it doesn’t know, and on whether that honesty can still be turned into better risk-adjusted decisions.',
   problem: [
     'Binary daily directional classification (up / down) across 15 diversified assets.',
     '60-day input sequences of engineered technical, volatility, and regime features.',
-    'Deliberately scoped to daily OHLCV-derived features only — no news or macro data — to isolate model behaviour and interpretability rather than chase marginal accuracy via data expansion.',
+    'Deliberately scoped to daily OHLCV-derived features only (no news or macro data), to isolate model behaviour and interpretability rather than chase marginal accuracy via data expansion.',
   ],
   architecture: [
     'LSTM encoder with an attention layer over the 60 time steps.',
     'Asset embeddings let the model share structure across assets while still differentiating between them.',
-    'Mixture-of-Experts head with hard routing: three specialist expert networks (trending / range-bound / high-volatility), each activated only for sequences the regime-detection layer assigns to that market state — so no single output layer has to compromise across conditions.',
+    'Mixture-of-Experts head with hard routing: three specialist expert networks (trending / range-bound / high-volatility), each activated only for sequences the regime-detection layer assigns to that market state, so no single output layer has to compromise across conditions.',
     'BiLSTM was tested and rejected despite higher raw accuracy, because it leaks future information into predictions. Methodological rigor over a better-looking number.',
   ],
   evalWindow: '5,340 observations · 15 assets · 356 trading days (12 Nov 2024 – 16 Apr 2026) · walk-forward, out-of-sample',
@@ -100,17 +100,17 @@ export const flagship = {
     { label: 'Expected Calibration Error', value: '0.018' },
   ],
   accuracyNote:
-    'Near-random directional accuracy, consistent with the Efficient Market Hypothesis. But the model is honest and well-calibrated about its own uncertainty — a Brier Score roughly half that of naive baselines and an ECE of 0.018. That combination — weak signal, trustworthy probabilities — is the intellectually honest core of the project, not a result to soften.',
+    'Near-random directional accuracy, consistent with the Efficient Market Hypothesis. But the model is honest and well-calibrated about its own uncertainty: a Brier Score roughly half that of naive baselines and an ECE of 0.018. That combination (weak signal, trustworthy probabilities) is the intellectually honest core of the project, not a result to soften.',
   backtest: {
     threshold: 0.53,
-    note: 'A confidence-gated strategy — only acts when predicted probability crosses a 0.53 threshold, cash otherwise — benchmarked walk-forward against Buy-and-Hold and a naive lower-threshold strategy over the same 356-day window, no transaction costs.',
+    note: 'A confidence-gated strategy (only acts when predicted probability crosses a 0.53 threshold, cash otherwise), benchmarked walk-forward against Buy-and-Hold and a naive lower-threshold strategy over the same 356-day window, no transaction costs.',
     strategies: [
       { name: 'MoE Advisor (confidence-gated)', cumReturn: 10.4, sharpe: 1.518, maxDrawdown: -5.4, exposure: 18 },
       { name: 'Buy-and-Hold', cumReturn: 28.5, sharpe: 1.282, maxDrawdown: -16.2, exposure: 100 },
       { name: 'Naive (lower threshold)', cumReturn: 9.8, sharpe: 0.842, maxDrawdown: -12.4, exposure: 53.5 },
     ],
     takeaway:
-      'The Advisor earns less in absolute terms but achieves a materially better Sharpe ratio and a much shallower drawdown. It is a risk-filtering mechanism, not an alpha-generating one — and the project frames it that way rather than overselling returns. Quality of exposure over quantity of returns.',
+      'The Advisor earns less in absolute terms but achieves a materially better Sharpe ratio and a much shallower drawdown. It is a risk-filtering mechanism, not an alpha-generating one, and the project frames it that way rather than overselling returns. Quality of exposure over quantity of returns.',
   },
   shap: {
     note: 'SHAP applied per-prediction and per-regime, translated into a narrative explanation layer for end users.',
@@ -118,7 +118,7 @@ export const flagship = {
       { feature: 'Volatility_Ratio', importance: 0.91, direction: 'negative', note: 'consistent top driver, all regimes' },
       { feature: 'Returns_20', importance: 0.84, direction: 'negative', note: 'consistent top driver, all regimes' },
       { feature: 'MACD_diff', importance: 0.63, direction: 'positive', note: 'the one consistently bullish driver' },
-      { feature: 'RSI', importance: 0.41, direction: 'mixed', note: 'enters top-10 only under high-volatility regime, replacing RollingMean_10 — a genuine sign of regime specialisation' },
+      { feature: 'RSI', importance: 0.41, direction: 'mixed', note: 'enters top-10 only under high-volatility regime, replacing RollingMean_10, a genuine sign of regime specialisation' },
     ],
   },
   delivery:
@@ -135,21 +135,21 @@ export const projects = [
     title: 'myInsurance365',
     role: 'Co-founder · Cyprus · 2025',
     summary:
-      'An early-stage Cypriot insurance comparison platform — conceptualised and led through early development, stakeholder meetings with insurance executives and marketing partners, before being discontinued due to regulatory constraints.',
+      'An early-stage Cypriot insurance comparison platform, conceptualised and led through early development, stakeholder meetings with insurance executives and marketing partners, before being discontinued due to regulatory constraints.',
     points: [
       'Conceptualised and led early-stage development of a Cypriot insurance comparison platform.',
       'Conducted stakeholder meetings with insurance company executives and marketing partners.',
-      'Discontinued due to regulatory constraints — a real early-stage fintech venture, and a candid lesson in regulatory reality rather than a failure to hide.',
+      'Discontinued due to regulatory constraints: a real early-stage fintech venture, and a candid lesson in regulatory reality rather than a failure to hide.',
     ],
     tech: ['Product Strategy', 'Stakeholder Management', 'Fintech Regulation'],
-    githubUrl: null, // TODO: no public repo — internal venture
+    githubUrl: null, // TODO: no public repo, internal venture
     demoUrl: null, // TODO: discontinued, no live demo
   },
   {
     title: 'SpecWall',
     role: 'Freelance Web Developer · Remote (EU) · Jun 2025–Present',
     summary:
-      'A commercial website for a modular construction systems company, serving architects, contractors, and developers across the EU — product showcase, specifications, case studies, and blog.',
+      'A commercial website for a modular construction systems company, serving architects, contractors, and developers across the EU: product showcase, specifications, case studies, and blog.',
     points: [
       'Front-end built in Next.js and React; responsive multi-page site with product filtering and image galleries.',
       'Integrated contact and quote request form for B2B lead generation.',
@@ -164,7 +164,7 @@ export const projects = [
     title: 'Child Well-Being Tracking Application',
     role: 'Team Project (Scrum) · University of Essex · 2024/25',
     summary:
-      'A full-stack application for parents to track child health and activity — sleep, feeding, medication, growth, temperature, and diaper changes.',
+      'A full-stack application for parents to track child health and activity: sleep, feeding, medication, growth, temperature, and diaper changes.',
     points: [
       'Contributed growth tracking statistics, reminders, and calendar integration.',
       'Built notifications, doctor’s orders module, and settings/profile management.',
@@ -246,7 +246,7 @@ export const leadership = [
   {
     title: 'Scout Republic Badge, Cyprus',
     period: '2022',
-    detail: 'Awarded by the President of the Republic of Cyprus — the highest distinction in Cypriot Scouting.',
+    detail: 'Awarded by the President of the Republic of Cyprus, the highest distinction in Cypriot Scouting.',
   },
   {
     title: 'Class President, Apostles Peter and Paul Lyceum',
@@ -334,7 +334,7 @@ export const skills = {
       ],
     },
   ],
-  certifications: [{ name: 'CCNA — Introduction to Networks', issuer: 'Cisco Digital Credential', year: '2024' }],
+  certifications: [{ name: 'CCNA: Introduction to Networks', issuer: 'Cisco Digital Credential', year: '2024' }],
   languages: [
     { name: 'Greek', level: 'Native' },
     { name: 'English', level: 'Fluent, C1' },
@@ -358,7 +358,7 @@ export const education = [
   {
     institution: 'University of Essex',
     location: 'Colchester, UK',
-    degree: 'BSc Computer Science — First Class',
+    degree: 'BSc Computer Science, First Class',
     period: 'Sep 2023 – Jun 2026',
     detail: 'Full academic record and module breakdown above.',
     status: 'current',

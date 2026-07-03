@@ -3,7 +3,7 @@ import { animate, useInView } from 'framer-motion';
 
 // Animated numeric stat: counts up from 0 when scrolled into view, once.
 // Hand-rolled with Framer Motion's animate() rather than a separate
-// count-up library — one less dependency for a few lines of tweening.
+// count-up library, one less dependency for a few lines of tweening.
 export default function Stat({ value, decimals = 0, suffix = '', prefix = '', label, className = '' }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });

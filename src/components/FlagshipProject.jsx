@@ -156,7 +156,7 @@ export default function FlagshipProject() {
 
   return (
     <Section id="flagship" className="bg-gradient-to-b from-transparent via-signal/[0.04] to-transparent">
-      <Eyebrow>03 — Flagship Research</Eyebrow>
+      <Eyebrow>03 · Flagship Research</Eyebrow>
       <Reveal>
         <SectionTitle>{flagship.title}</SectionTitle>
         <p className="mt-2 tabular-mono text-sm text-paper-100/50">{flagship.subtitle}</p>
@@ -191,7 +191,7 @@ export default function FlagshipProject() {
         </Reveal>
       </div>
 
-      {/* Interactive tabbed results widget — the centerpiece */}
+      {/* Interactive tabbed results widget, the centerpiece */}
       <Reveal delay={0.15} className="mt-16">
         <div className="rounded-3xl border border-signal/15 bg-ink-900/50 p-6 md:p-10">
           <div className="tabular-mono mb-2 text-xs uppercase tracking-[0.2em] text-signal-light">
@@ -279,7 +279,7 @@ export default function FlagshipProject() {
 
       {/* SHAP explainability */}
       <Reveal delay={0.1} className="mt-16">
-        <h3 className="mb-2 font-display text-lg text-paper-50">Explainability — per-regime SHAP attribution</h3>
+        <h3 className="mb-2 font-display text-lg text-paper-50">Explainability: per-regime SHAP attribution</h3>
         <p className="mb-6 max-w-2xl text-sm text-paper-100/60">{flagship.shap.note}</p>
         <div className="max-w-2xl">
           <ShapBars />

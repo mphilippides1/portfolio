@@ -73,11 +73,11 @@ function ModuleBars() {
 export default function AcademicRecord() {
   return (
     <Section id="academics" className="bg-ink-900/40">
-      <Eyebrow>02 — Academic Record</Eyebrow>
+      <Eyebrow>02 · Academic Record</Eyebrow>
       <Reveal>
         <SectionTitle>Consistency, not a one-off result.</SectionTitle>
         <p className="mt-4 max-w-2xl text-lg text-paper-100/65">
-          Grades framed as evidence of quantitative rigor across three years — an upward trajectory,
+          Grades framed as evidence of quantitative rigor across three years: an upward trajectory,
           not a single strong semester.
         </p>
       </Reveal>

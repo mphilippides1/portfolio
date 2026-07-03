@@ -67,11 +67,11 @@ function ProjectCard({ project, index }) {
 export default function Projects() {
   return (
     <Section id="projects">
-      <Eyebrow>04 — Other Projects</Eyebrow>
+      <Eyebrow>04 · Other Projects</Eyebrow>
       <Reveal>
         <SectionTitle>Shipping ability, beyond the research.</SectionTitle>
         <p className="mt-4 max-w-2xl text-lg text-paper-100/65">
-          Freelance delivery, entrepreneurship, and team engineering — evidence this extends past
+          Freelance delivery, entrepreneurship, and team engineering: evidence this extends past
           one capstone.
         </p>
       </Reveal>

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 // Faint animated data-grid + line-chart motif for the hero background.
-// Pure CSS/SVG — no canvas, cheap to render, decorative (aria-hidden).
+// Pure CSS/SVG, no canvas, cheap to render, decorative (aria-hidden).
 export default function DataGridBackground() {
   const path = useMemo(() => {
     // Deterministic pseudo-random walk so it reads as a "price series" without

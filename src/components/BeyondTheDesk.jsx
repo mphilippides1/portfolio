@@ -18,7 +18,7 @@ function FlipCard({ item, index }) {
         role="button"
         tabIndex={0}
         data-cursor-hover
-        aria-label={`${item.title} — tap to flip`}
+        aria-label={`${item.title}, tap to flip`}
       >
         <motion.div
           className="relative h-full w-full [transform-style:preserve-3d]"
@@ -49,7 +49,7 @@ function FlipCard({ item, index }) {
 export default function BeyondTheDesk() {
   return (
     <Section id="beyond" className="bg-ink-900/40">
-      <Eyebrow>07 — Beyond the Desk</Eyebrow>
+      <Eyebrow>07 · Beyond the Desk</Eyebrow>
       <Reveal>
         <SectionTitle>Same discipline, different scoreboard.</SectionTitle>
         <p className="mt-4 max-w-2xl text-lg text-paper-100/65">Tap a card to flip it.</p>

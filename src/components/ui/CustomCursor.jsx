@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 // Subtle cursor-following dot + ring, desktop/fine-pointer only.
-// Automatically no-ops on touch devices — no event listeners are attached.
+// Automatically no-ops on touch devices, no event listeners are attached.
 export default function CustomCursor() {
   const [enabled, setEnabled] = useState(false);
   const [hoveringInteractive, setHoveringInteractive] = useState(false);

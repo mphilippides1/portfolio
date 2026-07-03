@@ -7,7 +7,7 @@ const levelWidth = { Advanced: '90%', Intermediate: '65%' };
 export default function Skills() {
   return (
     <Section id="skills">
-      <Eyebrow>08 — Skills</Eyebrow>
+      <Eyebrow>08 · Skills</Eyebrow>
       <Reveal>
         <SectionTitle>Tools in service of the research.</SectionTitle>
       </Reveal>
@@ -55,7 +55,7 @@ export default function Skills() {
             <h3 className="tabular-mono mb-3 text-xs uppercase tracking-[0.2em] text-signal-light">Certifications</h3>
             {skills.certifications.map((c) => (
               <div key={c.name} className="text-sm text-paper-100/75">
-                {c.name} <span className="text-paper-100/40">— {c.issuer}, {c.year}</span>
+                {c.name} <span className="text-paper-100/40">· {c.issuer}, {c.year}</span>
               </div>
             ))}
           </div>

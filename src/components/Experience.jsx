@@ -5,9 +5,9 @@ import { experience } from '../data';
 export default function Experience() {
   return (
     <Section id="experience" className="bg-ink-900/40">
-      <Eyebrow>05 — Experience</Eyebrow>
+      <Eyebrow>05 · Experience</Eyebrow>
       <Reveal>
-        <SectionTitle>Consulting, fintech, and the military — in that order of surprise.</SectionTitle>
+        <SectionTitle>Consulting, fintech, and the military, in that order of surprise.</SectionTitle>
       </Reveal>
 
       <div className="relative mt-14 ml-3 border-l border-paper-100/15 pl-8 md:ml-6">

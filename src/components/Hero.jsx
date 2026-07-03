@@ -5,7 +5,7 @@ import { hero, links } from '../data';
 import DataGridBackground from './ui/DataGridBackground';
 import { GithubIcon, LinkedinIcon } from './ui/BrandIcons';
 
-// Simple typewriter/rotator for the role line — no external dependency needed.
+// Simple typewriter/rotator for the role line, no external dependency needed.
 function RoleRotator({ roles }) {
   const [roleIndex, setRoleIndex] = useState(0);
   const [display, setDisplay] = useState('');

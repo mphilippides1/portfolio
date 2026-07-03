@@ -5,7 +5,7 @@ import { about } from '../data';
 export default function About() {
   return (
     <Section id="about">
-      <Eyebrow>01 — About</Eyebrow>
+      <Eyebrow>01 · About</Eyebrow>
       <Reveal>
         <SectionTitle>Quantitative by training, entrepreneurial by instinct.</SectionTitle>
       </Reveal>

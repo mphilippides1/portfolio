@@ -5,7 +5,7 @@ import { education } from '../data';
 export default function Education() {
   return (
     <Section id="education" className="bg-ink-900/40">
-      <Eyebrow>09 — Education</Eyebrow>
+      <Eyebrow>09 · Education</Eyebrow>
       <Reveal>
         <SectionTitle>From Limassol to London.</SectionTitle>
       </Reveal>

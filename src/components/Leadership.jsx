@@ -6,7 +6,7 @@ import { leadership } from '../data';
 export default function Leadership() {
   return (
     <Section id="leadership">
-      <Eyebrow>06 — Leadership &amp; Achievements</Eyebrow>
+      <Eyebrow>06 · Leadership &amp; Achievements</Eyebrow>
       <Reveal>
         <SectionTitle>Leading isn't a side note.</SectionTitle>
       </Reveal>
